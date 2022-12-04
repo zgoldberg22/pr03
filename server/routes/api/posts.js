@@ -1,14 +1,6 @@
 const express = require('express'); 
 
 const mongodb = require('mongodb');
-// const uri = "mongodb+srv://zgoldberg22:<password>@pr-3.t5pi5dz.mongodb.net/?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-// const { MongoClient, ServerApiVersion } = require('mongodb');
-// const uri = "mongodb+srv://zgoldberg22:<blHGlN04zNtpmWyh>@pr-3.t5pi5dz.mongodb.net/?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-
 
 //set up router
 const router = express.Router(); 
@@ -40,8 +32,6 @@ router.delete('/:id', async (req, res) => {
 })
 
 //connect to database
-//username: zgoldberg22
-//password: 64LyqnoCB7eHyoiE
 async function loadPostsCollection() {
    const {MongoClient, ServerApiVersion} = require('mongodb'); 
    const uri = "mongodb+srv://zgoldberg22:64LyqnoCB7eHyoiE@pr-3.t5pi5dz.mongodb.net/?retryWrites=true&w=majority";
